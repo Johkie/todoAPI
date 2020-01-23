@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> TodoList</title>
+        <script src="script.js" defer></script>
+
+        <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            th, td {
+              padding: 5px;
+              text-align: left;    
+            }
+            </style>
+    </head>
+
+    <body onload="getTasks()"> <!-- Load task when page is done loading -->
+
+        <!-- Task table -->
+        <table id="taskTable" style="width:70%">
+            <tr>
+                <th>ID</th>
+                <th>TaskName</th>
+                <th>IsComplete</th>
+            </tr>
+        </table>
+
+        <!-- Uppdate button -->
+        <div>
+           <p><button type="button" onclick="getTasks()">Uppdatera</button></p> 
+        </div>
+
+        <!-- Create new task -->
+        <div>
+            <div>New task name</div>
+            <div>
+                <input type="text" id="newTaskName">
+                <input type="checkbox" id= "newTaskCheckbox">
+                <input type= "button" value="Submit" onclick="createTask()">
+            </div>
+        </div>
+
+
+    </body>
+</html>
